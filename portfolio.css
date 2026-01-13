@@ -1,0 +1,323 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #0f0f0f;
+  color: #ffffff;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0f0f0f;
+  z-index: 1000;
+}
+
+.logo {
+  color: #f5b301;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #f5b301;
+  transition: 0.3s;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 140px 80px 80px;
+}
+
+.content {
+  max-width: 600px;
+}
+
+.hello {
+  color: #f5b301;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 56px;
+}
+
+h1 span {
+  color: #f5b301;
+}
+
+.role {
+  font-size: 28px;
+  margin: 15px 0;
+}
+
+/* ROLE ANIMATION */
+.typing::after {
+  content: "Machine Learning Engineer";
+  color: #00ff99;
+  animation: roles 6s infinite;
+}
+
+@keyframes roles {
+  0% { content: "Machine Learning Engineer"; }
+  50% { content: "Data Analyst"; }
+  100% { content: "Machine Learning Engineer"; }
+}
+
+.desc {
+  opacity: 0.7;
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+/* BUTTONS */
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.primary {
+  background: #f5b301;
+  color: #000;
+}
+
+.outline {
+  border: 2px solid #f5b301;
+  color: #f5b301;
+}
+
+/* IMAGE */
+.image-box {
+  position: relative;
+  width: 320px;
+  height: 320px;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top; /* keeps face visible */
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+
+.circle {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 3px solid #00ff99;
+  animation: rotate 6s linear infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ABOUT */
+.about {
+  padding: 100px 80px;
+  text-align: center;
+}
+
+.about h2 {
+  margin-bottom: 20px;
+  color: #f5b301;
+}
+
+/* SKILLS */
+.skills {
+  padding: 100px 80px;
+}
+
+.skill {
+  margin: 25px 0;
+}
+
+.bar {
+  background: #222;
+  height: 10px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: #00ff99;
+  animation: fill 2s forwards;
+}
+
+.html { width: 90%; }
+.css { width: 85%; }
+.SQL { width: 100%; }
+.MachineLearning{width: 90%;}
+.Android{width:70%}
+.C{width: 80%;}
+.Python{width: 80%;}
+
+@keyframes fill {
+  from { width: 0; }
+}
+/* Project */
+.projects {
+  padding: 100px 80px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.project-card {
+  background: #161616;
+  padding: 30px;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px #00ff99;
+}
+
+.project-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.tech {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 15px;
+}
+
+.desc {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.highlight {
+  margin-top: 10px;
+  color: #00ff99;
+  font-weight: bold;
+}
+
+.links {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.links a {
+  text-decoration: none;
+  color: #00ff99;
+  border: 1px solid #00ff99;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.links a:hover {
+  background: #00ff99;
+  color: #000;
+}
+
+/* Achievement */
+.achievements {
+  padding: 100px 80px;
+}
+
+.achievement-list {
+  list-style: none;
+  margin-top: 30px;
+}
+
+.achievement-list li {
+  background: #161616;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  line-height: 1.6;
+  transition: 0.3s;
+}
+
+.achievement-list li:hover {
+  box-shadow: 0 0 15px #00ff99;
+  transform: translateY(-5px);
+}
+
+
+.contact {
+  padding: 100px 80px;
+  text-align: center;
+}
+
+.contact-text {
+  max-width: 600px;
+  margin: 20px auto 40px;
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+.contact-info p {
+  margin: 10px 0;
+}
+
+.contact-info a {
+  color: #00ff99;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
